@@ -1,0 +1,29 @@
+name: Feature request
+description: Propose a focused compatibility or operator improvement
+title: "feature: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What concrete user or operator problem should be solved?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+    validations:
+      required: true
+  - type: textarea
+    id: semantic
+    attributes:
+      label: Semantic-browser fit
+      description: How does this preserve the DOM-first path and pixel fallback?
+    validations:
+      required: true
+  - type: textarea
+    id: tradeoffs
+    attributes:
+      label: Security and compatibility tradeoffs

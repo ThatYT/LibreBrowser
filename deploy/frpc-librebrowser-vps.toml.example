@@ -1,0 +1,20 @@
+# DRAFT: additional frpc visitor on the VPS; not a replacement for frps.
+# Confirm frps listens on loopback:7000. Match its existing auth/TLS policy.
+# This example assumes token authentication; review before installation.
+serverAddr = "127.0.0.1"
+serverPort = 7000
+auth.method = "token"
+auth.token = "{{ .Envs.LIBREBROWSER_FRP_TOKEN }}"
+transport.tls.enable = true
+transport.tcpMux = false
+
+[[visitors]]
+name = "librebrowser-web-vps"
+type = "stcp"
+# Match the homeserver frpc's user namespace, or set an empty value if it has none.
+serverUser = "{{ .Envs.LIBREBROWSER_FRP_USER }}"
+serverName = "librebrowser-web"
+secretKey = "{{ .Envs.LIBREBROWSER_FRP_SECRET }}"
+bindAddr = "127.0.0.1"
+# Proposed port: confirm it is free on the VPS before installation.
+bindPort = 60830

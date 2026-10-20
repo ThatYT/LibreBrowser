@@ -1,0 +1,11 @@
+.git
+.env
+data
+bin
+*.log
+
+backups
+*.db*
+
+/run
+/engine

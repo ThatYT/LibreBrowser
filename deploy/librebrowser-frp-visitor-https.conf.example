@@ -1,0 +1,9 @@
+# /etc/systemd/system/librebrowser-frp-visitor.service.d/20-https.conf
+[Unit]
+Requires=frps.service
+After=frps.service
+[Service]
+LoadCredential=
+LoadCredential=frpc.json:/etc/frp/librebrowser-visitor-https.json
+ExecStart=
+ExecStart=/usr/local/bin/frpc-librebrowser -c %d/frpc.json

@@ -1,0 +1,64 @@
+name: librebrowser
+services:
+  app:
+    build:
+      context: .
+      network: "${BUILD_NETWORK:-default}"
+    image: librebrowser:local
+    restart: unless-stopped
+    user: "10001:10001"
+    command: [serve]
+    ports: ["127.0.0.1:${LOCAL_PORT:-8090}:8090"]
+    environment:
+      LISTEN_ADDR: "0.0.0.0:8090"
+      PUBLIC_ORIGIN: "${PUBLIC_ORIGIN:-https://browser.home.libremedicine.org}"
+      LOCAL_DEV: "false"
+      DATABASE_PATH: /data/librebrowser.db
+      BROKER_SOCKET: /run/librebrowser/broker.sock
+      TRUSTED_PROXY_CIDRS: "${TRUSTED_PROXY_CIDRS:-127.0.0.1/32}"
+    volumes:
+      - accounts:/data
+      - broker-socket:/run/librebrowser:ro
+    depends_on:
+      broker:
+        condition: service_healthy
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    read_only: true
+    tmpfs: ["/tmp:size=16m,noexec,nosuid"]
+    mem_limit: 256m
+    pids_limit: 128
+  broker:
+    image: librebrowser:local
+    container_name: librebrowser-broker
+    sysctls:
+      net.ipv4.ip_forward: "0"
+      net.ipv6.conf.all.forwarding: "0"
+    stop_grace_period: 2m
+    restart: unless-stopped
+    user: "0:10001"
+    command: [broker]
+    environment:
+      BROKER_CONTAINER: librebrowser-broker
+      SERVICE_IMAGE: librebrowser:local
+      CHROMIUM_IMAGE: "${CHROMIUM_IMAGE:-lscr.io/linuxserver/chromium:latest}"
+      BROWSER_MEMORY: "${BROWSER_MEMORY:-2147483648}"
+      BROWSER_NANO_CPUS: "${BROWSER_NANO_CPUS:-2000000000}"
+      BROWSER_PIDS: "${BROWSER_PIDS:-512}"
+      EGRESS_DENY_CIDRS: "${EGRESS_DENY_CIDRS:-}"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - broker-socket:/run/librebrowser
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    read_only: true
+    mem_limit: 128m
+    pids_limit: 64
+    healthcheck:
+      test: [CMD, librebrowser, broker-health]
+      interval: 3s
+      timeout: 2s
+      retries: 20
+volumes:
+  accounts:
+  broker-socket:

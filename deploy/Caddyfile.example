@@ -1,0 +1,7 @@
+# EXAMPLE ONLY. Do not import into production before completing docs/DEPLOYMENT.md.
+browser.home.libremedicine.org {
+    reverse_proxy 127.0.0.1:8090 {
+        header_up X-Forwarded-Proto https
+        stream_close_delay 5m
+    }
+}

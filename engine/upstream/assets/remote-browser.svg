@@ -1,0 +1,222 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="1200"
+  height="320"
+  viewBox="0 0 1200 320"
+  role="img"
+  aria-labelledby="title description"
+>
+  <title id="title">Remote Browser</title>
+  <desc id="description">
+    Chromium runs on your server; viewers get a scriptless, interactive DOM mirror where text stays
+    text.
+  </desc>
+
+  <defs>
+    <linearGradient
+      id="rb-spectral"
+      gradientUnits="userSpaceOnUse"
+      x1="322"
+      y1="120"
+      x2="600"
+      y2="180"
+    >
+      <stop offset="0" stop-color="#b5a3ff" />
+      <stop offset=".55" stop-color="#8fb8ff" />
+      <stop offset="1" stop-color="#6ee7ff" />
+    </linearGradient>
+    <linearGradient id="rb-seam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#b5a3ff" stop-opacity="0" />
+      <stop offset=".18" stop-color="#b5a3ff" stop-opacity=".85" />
+      <stop offset=".52" stop-color="#8fb8ff" stop-opacity=".5" />
+      <stop offset="1" stop-color="#6ee7ff" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="rb-meter" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#b5a3ff" />
+      <stop offset="1" stop-color="#6ee7ff" />
+    </linearGradient>
+    <linearGradient id="rb-glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#121428" />
+      <stop offset="1" stop-color="#070a13" />
+    </linearGradient>
+    <radialGradient id="rb-sky" cx=".28" cy="0" r=".85">
+      <stop offset="0" stop-color="#b5a3ff" stop-opacity=".12" />
+      <stop offset=".5" stop-color="#8fb8ff" stop-opacity=".04" />
+      <stop offset="1" stop-color="#8fb8ff" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="rb-bloom" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#b5a3ff" stop-opacity=".15" />
+      <stop offset=".6" stop-color="#6ee7ff" stop-opacity=".045" />
+      <stop offset="1" stop-color="#6ee7ff" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="rb-drift" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#6ee7ff" stop-opacity=".12" />
+      <stop offset="1" stop-color="#6ee7ff" stop-opacity="0" />
+    </radialGradient>
+    <pattern id="rb-grain" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r=".6" fill="#e6e2f8" fill-opacity=".05" />
+    </pattern>
+    <clipPath id="rb-card">
+      <rect width="1200" height="320" rx="20" />
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#rb-card)">
+    <rect width="1200" height="320" fill="#05080b" />
+    <rect width="1200" height="320" fill="url(#rb-grain)" />
+    <rect width="1200" height="320" fill="url(#rb-sky)" />
+    <ellipse cx="120" cy="330" rx="340" ry="150" fill="url(#rb-drift)" />
+    <ellipse cx="914" cy="150" rx="290" ry="145" fill="url(#rb-bloom)" />
+    <rect width="1200" height="1.5" fill="url(#rb-seam)" />
+  </g>
+  <rect x=".5" y=".5" width="1199" height="319" rx="19.5" fill="none" stroke="#1e2033" />
+
+  <!-- Identity -->
+  <rect x="72" y="63" width="24" height="2" rx="1" fill="#b5a3ff" />
+  <text
+    x="108"
+    y="70"
+    fill="#b5a3ff"
+    font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace"
+    font-size="11.5"
+    letter-spacing="3.4"
+  >
+    SELF-HOSTED SEMANTIC REMOTING
+  </text>
+
+  <text
+    x="70"
+    y="166"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="62"
+    font-weight="700"
+    letter-spacing="-2"
+  >
+    <tspan fill="#f3f2f9">remote</tspan>
+    <tspan fill="url(#rb-spectral)">browser</tspan>
+  </text>
+
+  <text
+    x="73"
+    y="208"
+    fill="#9a9cb0"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="19"
+  >
+    The page stays on the server. The text stays text.
+  </text>
+
+  <rect x="73" y="234" width="430" height="1" fill="#1e2033" />
+  <text
+    x="73"
+    y="262"
+    fill="#6d6f84"
+    font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace"
+    font-size="11"
+    letter-spacing="2.6"
+  >
+    SCRIPTLESS DOM · TRUSTED INPUT · PIXEL FALLBACK
+  </text>
+
+  <!-- Artifact: the viewer -->
+  <text
+    x="700"
+    y="70"
+    fill="#6d6f84"
+    font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace"
+    font-size="11"
+    letter-spacing="2.8"
+  >
+    VIEWER
+  </text>
+
+  <rect x="700" y="86" width="428" height="124" rx="12" fill="url(#rb-glass)" stroke="#262a44" />
+  <rect x="716" y="98" width="396" height="22" rx="11" fill="#080b14" stroke="#1c2033" />
+  <circle cx="731" cy="109" r="3" fill="none" stroke="#6d6f84" />
+  <path d="M731 106.2v-1.6" stroke="#6d6f84" />
+  <text
+    x="744"
+    y="113"
+    fill="#7d7f9a"
+    font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace"
+    font-size="10.5"
+  >
+    example.com/article
+  </text>
+  <text
+    x="1100"
+    y="113"
+    fill="#6d6f84"
+    font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace"
+    font-size="11"
+    text-anchor="end"
+  >
+    ⋮
+  </text>
+
+  <text
+    x="716"
+    y="150"
+    fill="#e3e5f2"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="15"
+    font-weight="600"
+  >
+    Nothing here is a screenshot.
+  </text>
+  <text
+    x="716"
+    y="172"
+    fill="#8a8da4"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="12.5"
+  >
+    Chromium keeps the JavaScript, cookies, and session;
+  </text>
+  <rect x="714" y="180" width="219" height="17" rx="3" fill="#b5a3ff" fill-opacity=".26" />
+  <text
+    x="716"
+    y="193"
+    fill="#dcdcf3"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="12.5"
+  >
+    your viewer gets markup it can select,
+  </text>
+  <text
+    x="937"
+    y="193"
+    fill="#8a8da4"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="12.5"
+  >
+    copy, and find.
+  </text>
+  <rect x="932" y="179" width="1.5" height="19" fill="#b5a3ff" />
+
+  <!-- Instrument row -->
+  <rect x="700" y="228" width="427" height="3" rx="1.5" fill="#1e2033" />
+  <rect x="700" y="228" width="392" height="3" rx="1.5" fill="url(#rb-meter)" />
+  <circle cx="1092" cy="229.5" r="3.5" fill="#6ee7ff" />
+  <text
+    x="700"
+    y="256"
+    fill="#6d6f84"
+    font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace"
+    font-size="10.5"
+    letter-spacing="2.2"
+  >
+    MIRROR IN SYNC
+  </text>
+  <text
+    x="1127"
+    y="256"
+    fill="#9a9cb0"
+    font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace"
+    font-size="10.5"
+    letter-spacing="1.4"
+    text-anchor="end"
+  >
+    0 gaps
+  </text>
+</svg>

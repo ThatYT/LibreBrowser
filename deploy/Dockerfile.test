@@ -1,0 +1,10 @@
+FROM golang:1.27.2-alpine AS build
+WORKDIR /src
+COPY go.mod go.sum ./
+RUN go mod download
+COPY . .
+RUN CGO_ENABLED=0 go test -c -o /out/acceptance ./internal/libre
+FROM alpine:3.23
+RUN apk add --no-cache ca-certificates
+COPY --from=build /out/acceptance /usr/local/bin/acceptance
+ENTRYPOINT ["acceptance", "-test.v", "-test.run=TestLiveChromium", "-test.timeout=8m"]

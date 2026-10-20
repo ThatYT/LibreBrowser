@@ -1,0 +1,13 @@
+node_modules/
+dist/
+coverage/
+*.log
+.DS_Store
+.vite/
+.cache/
+/tmp/
+.env
+.env.*
+!.env.example
+scripts/out/
+remote-browser-oss-agent-final.md

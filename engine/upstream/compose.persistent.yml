@@ -1,0 +1,10 @@
+# Opt-in overlay. The default compose.yml keeps Chromium's profile on tmpfs.
+services:
+  browser:
+    environment:
+      BROWSER_PROFILE_DIR: /profile
+    volumes:
+      - browser-profile:/profile
+
+volumes:
+  browser-profile:

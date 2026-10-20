@@ -1,0 +1,11 @@
+# Replaces the older 10-direct-route.conf after an approved migration.
+[Unit]
+After=v2raya.service
+[Service]
+LoadCredential=
+LoadCredential=frpc.json:/etc/frp/librebrowser-home-https.json
+ExecStart=
+ExecStart=/usr/local/bin/frpc -c %d/frpc.json
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX AF_NETLINK
+ExecStartPre=+/usr/local/libexec/frp-https-route apply librebrowser-frpc
+ExecStopPost=+/usr/local/libexec/frp-https-route remove librebrowser-frpc

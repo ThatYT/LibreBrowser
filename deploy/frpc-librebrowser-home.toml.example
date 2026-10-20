@@ -1,0 +1,10 @@
+# Proxy block for a SEPARATE homeserver frpc config, using the existing
+# server/auth/TLS settings. Active HTTPS transport settings are in docs/FRP_PERFORMANCE.md.
+# The main config must set transport.tcpMux = false to match the active server.
+# Both frpc services must receive the same strong secret in their service environment.
+[[proxies]]
+name = "librebrowser-web"
+type = "stcp"
+secretKey = "{{ .Envs.LIBREBROWSER_FRP_SECRET }}"
+localIP = "127.0.0.1"
+localPort = 8090

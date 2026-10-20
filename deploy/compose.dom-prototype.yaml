@@ -1,0 +1,27 @@
+# A private broker for a native localhost app. No host TCP ports are published.
+# App command and disposable account setup: docs/DOM_IMPLEMENTATION.md.
+name: librebrowser-dom-prototype
+services:
+  broker:
+    image: librebrowser-dom-control:local
+    container_name: librebrowser-dom-broker
+    command: [broker]
+    restart: unless-stopped
+    user: "0:${PROTOTYPE_GID:-1000}"
+    environment:
+      BROWSER_ENGINE: dom
+      BROKER_CONTAINER: librebrowser-dom-broker
+      SERVICE_IMAGE: librebrowser-dom-control:local
+      DOM_ENGINE_IMAGE: librebrowser-dom-engine:local
+      EGRESS_DENY_CIDRS: "${EGRESS_DENY_CIDRS:-38.55.193.253/32}"
+      EGRESS_UPSTREAM_SOCKET: /run/librebrowser-uplink/proxy.sock
+      EGRESS_UPSTREAM_VOLUME: librebrowser-v2raya-uplink
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - "${DOM_PROTOTYPE_DIR:-/tmp/librebrowser-dom-prototype}/run:/run/librebrowser"
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    read_only: true
+    mem_limit: 128m
+    pids_limit: 64
+    stop_grace_period: 2m

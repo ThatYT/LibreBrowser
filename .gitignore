@@ -1,0 +1,12 @@
+.env
+/data/
+/bin/
+*.db*
+/run/
+*.log
+
+/backups/
+
+/engine/upstream/node_modules/
+/engine/upstream/packages/*/node_modules/
+/engine/upstream/packages/*/dist/

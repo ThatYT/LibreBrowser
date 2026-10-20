@@ -1,0 +1,19 @@
+# Deployed VPS site example; review docs/PUBLIC_ROUTE.md before changes.
+# Upstream is the loopback-only FRP STCP visitor on the VPS.
+browser.home.libremedicine.org {
+	# TLS ends here; FRP authentication still protects the tunnel endpoint.
+	# All participating frpc/frps configs must set transport.tcpMux = false.
+	@frp_transport path /~!frp
+	handle @frp_transport {
+		reverse_proxy 127.0.0.1:7000 {
+			flush_interval -1
+		}
+	}
+	handle {
+		reverse_proxy 127.0.0.1:60830 {
+			header_up Host browser.home.libremedicine.org
+			header_up X-Forwarded-Proto https
+			header_up -Forwarded
+		}
+	}
+}

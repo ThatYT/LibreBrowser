@@ -1,0 +1,30 @@
+# Opt-in: docker compose -f compose.yaml -f compose.v2raya.yaml ...
+services:
+  broker:
+    environment:
+      EGRESS_UPSTREAM_SOCKET: /run/librebrowser-uplink/proxy.sock
+      EGRESS_UPSTREAM_VOLUME: librebrowser-v2raya-uplink
+    depends_on:
+      v2raya-uplink:
+        condition: service_started
+  v2raya-uplink:
+    image: librebrowser:local
+    command: [egress]
+    # Access only the existing host-loopback proxy; no TCP listener is opened.
+    network_mode: host
+    user: "65532:65532"
+    restart: unless-stopped
+    environment:
+      EGRESS_LISTEN_SOCKET: /run/librebrowser-uplink/proxy.sock
+      EGRESS_UPSTREAM_PROXY: "${V2RAYA_HTTP_PROXY:-http://127.0.0.1:20171}"
+      EGRESS_DENY_CIDRS: "${EGRESS_DENY_CIDRS:-}"
+    volumes:
+      - v2raya-uplink:/run/librebrowser-uplink
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    read_only: true
+    mem_limit: 128m
+    pids_limit: 64
+volumes:
+  v2raya-uplink:
+    name: librebrowser-v2raya-uplink

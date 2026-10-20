@@ -1,0 +1,11 @@
+# Isolated local TLS test. Uses a dedicated admin endpoint and does not install a root CA.
+{
+	admin off
+	skip_install_trust
+	auto_https disable_redirects
+}
+https://localhost:9443 {
+	bind 127.0.0.1
+	tls internal
+	reverse_proxy 127.0.0.1:8090
+}

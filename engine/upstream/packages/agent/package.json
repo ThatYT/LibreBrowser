@@ -1,0 +1,23 @@
+{
+  "name": "@mirror/agent",
+  "version": "0.1.0",
+  "description": "Injected rrweb recorder for Remote Browser",
+  "private": true,
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./index.d.ts",
+  "scripts": {
+    "build": "node build.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --passWithNoTests && node test/password.acceptance.mjs && node test/shadow.acceptance.mjs && node test/trusted-types.acceptance.mjs && node test/canvas.acceptance.mjs"
+  },
+  "dependencies": {
+    "@mirror/protocol": "workspace:*",
+    "@rrweb/record": "2.1.1",
+    "@rrweb/rrweb-plugin-canvas-webrtc-record": "2.1.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  }
+}

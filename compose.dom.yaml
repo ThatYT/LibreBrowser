@@ -1,0 +1,16 @@
+# Production integration overlay; validate the localhost prototype first.
+# RENDERER_ORIGIN must be a separate HTTPS hostname on the same site as PUBLIC_ORIGIN.
+services:
+  app:
+    image: librebrowser-dom-control:local
+    environment:
+      BROWSER_ENGINE: dom
+      BROWSER_IDLE_MINUTES: "${BROWSER_IDLE_MINUTES:-10}"
+      RENDERER_ORIGIN: "${RENDERER_ORIGIN:?Set the separate authenticated renderer HTTPS origin}"
+      # Both hostnames use the existing private FRP visitor; Go separates them by Host.
+      RENDERER_LISTEN_ADDR: "off"
+  broker:
+    image: librebrowser-dom-control:local
+    environment:
+      BROWSER_ENGINE: dom
+      DOM_ENGINE_IMAGE: librebrowser-dom-engine:local

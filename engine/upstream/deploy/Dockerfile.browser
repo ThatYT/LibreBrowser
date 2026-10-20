@@ -1,0 +1,40 @@
+FROM debian:bookworm-slim
+
+ENV DEBIAN_FRONTEND=noninteractive
+ENV TZ=Etc/UTC
+ENV HOME=/home/browser
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+        ca-certificates \
+        chromium \
+        chromium-sandbox \
+        curl \
+        dumb-init \
+        fonts-dejavu-core \
+        fonts-liberation \
+        fonts-noto-cjk \
+        fonts-noto-color-emoji \
+        fonts-noto-core \
+        socat \
+        xauth \
+        xvfb \
+    && rm -rf /var/lib/apt/lists/* \
+    && groupadd --gid 10001 browser \
+    && useradd --uid 10001 --gid 10001 --create-home --shell /usr/sbin/nologin browser \
+    && install -d -o browser -g browser /profile /runtime \
+    && install -d -o browser -g browser /opt/remote-browser
+
+COPY --chown=browser:browser deploy/browser-entrypoint.sh /opt/remote-browser/browser-entrypoint.sh
+RUN chmod 0755 /opt/remote-browser/browser-entrypoint.sh
+
+USER 10001:10001
+WORKDIR /home/browser
+
+# CDP is exposed to the private Compose network only. compose.yml publishes no browser port.
+EXPOSE 9222
+HEALTHCHECK --interval=5s --timeout=3s --start-period=15s --retries=20 \
+  CMD curl --fail --silent http://127.0.0.1:9222/json/version >/dev/null || exit 1
+
+ENTRYPOINT ["/usr/bin/dumb-init", "--", "/opt/remote-browser/browser-entrypoint.sh"]
+CMD ["about:blank"]

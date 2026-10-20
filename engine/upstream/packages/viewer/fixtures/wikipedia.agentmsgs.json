@@ -1,0 +1,578 @@
+[
+  {
+    "kind": "hello",
+    "docId": 3362801172,
+    "url": "data:text/html,%3C!doctype%20html%3E%0A%20%20%20%20%20%20%3Chtml%3E%3Chead%3E%3Ctitle%3ESemantic%20remoting%20fixture%3C%2Ftitle%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20body%20%7B%20font-family%3A%20sans-serif%3B%20margin%3A%2020px%3B%20%7D%0A%20%20%20%20%20%20%20%20%23known%20%7B%20position%3A%20absolute%3B%20left%3A%2040px%3B%20top%3A%2060px%3B%20width%3A%20180px%3B%20height%3A%2045px%3B%20%7D%0A%20%20%20%20%20%20%20%20%23scroller%20%7B%20position%3A%20absolute%3B%20left%3A%20260px%3B%20top%3A%2060px%3B%20width%3A%20120px%3B%20height%3A%2080px%3B%20overflow%3A%20scroll%3B%20%7D%0A%20%20%20%20%20%20%20%20%23scroll-content%20%7B%20width%3A%20400px%3B%20height%3A%20400px%3B%20%7D%0A%20%20%20%20%20%20%3C%2Fstyle%3E%3C%2Fhead%3E%3Cbody%3E%0A%20%20%20%20%20%20%3Cmain%3E%3Ch1%3ERemote%20desktop%20software%3C%2Fh1%3E%3Cp%3EA%20semantic%20mirror%20keeps%20text%20selectable.%3C%2Fp%3E%3C%2Fmain%3E%0A%20%20%20%20%20%20%3Cbutton%20id%3D%22known%22%3EKnown%20target%3C%2Fbutton%3E%0A%20%20%20%20%20%20%3Cdiv%20id%3D%22scroller%22%3E%3Cdiv%20id%3D%22scroll-content%22%3EScrollable%20fixture%3C%2Fdiv%3E%3C%2Fdiv%3E%0A%20%20%20%20%20%20%3Cinput%20id%3D%22value-control%22%20value%3D%22before%22%3E%0A%20%20%20%20%20%20%3Cscript%3Edocument.querySelector('%23value-control').addEventListener('input'%2C%20()%20%3D%3E%20window.__input_events%2B%2B)%3C%2Fscript%3E%0A%20%20%20%20%20%20%3C%2Fbody%3E%3C%2Fhtml%3E",
+    "isTop": true,
+    "ts": 1784628575040
+  },
+  {
+    "kind": "rrweb",
+    "docId": 3362801172,
+    "e": {
+      "type": 0,
+      "data": {},
+      "timestamp": 1784628575078
+    }
+  },
+  {
+    "kind": "rrweb",
+    "docId": 3362801172,
+    "e": {
+      "type": 1,
+      "data": {},
+      "timestamp": 1784628575095
+    }
+  },
+  {
+    "kind": "rrweb",
+    "docId": 3362801172,
+    "e": {
+      "type": 4,
+      "data": {
+        "href": "data:text/html,%3C!doctype%20html%3E%0A%20%20%20%20%20%20%3Chtml%3E%3Chead%3E%3Ctitle%3ESemantic%20remoting%20fixture%3C%2Ftitle%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20body%20%7B%20font-family%3A%20sans-serif%3B%20margin%3A%2020px%3B%20%7D%0A%20%20%20%20%20%20%20%20%23known%20%7B%20position%3A%20absolute%3B%20left%3A%2040px%3B%20top%3A%2060px%3B%20width%3A%20180px%3B%20height%3A%2045px%3B%20%7D%0A%20%20%20%20%20%20%20%20%23scroller%20%7B%20position%3A%20absolute%3B%20left%3A%20260px%3B%20top%3A%2060px%3B%20width%3A%20120px%3B%20height%3A%2080px%3B%20overflow%3A%20scroll%3B%20%7D%0A%20%20%20%20%20%20%20%20%23scroll-content%20%7B%20width%3A%20400px%3B%20height%3A%20400px%3B%20%7D%0A%20%20%20%20%20%20%3C%2Fstyle%3E%3C%2Fhead%3E%3Cbody%3E%0A%20%20%20%20%20%20%3Cmain%3E%3Ch1%3ERemote%20desktop%20software%3C%2Fh1%3E%3Cp%3EA%20semantic%20mirror%20keeps%20text%20selectable.%3C%2Fp%3E%3C%2Fmain%3E%0A%20%20%20%20%20%20%3Cbutton%20id%3D%22known%22%3EKnown%20target%3C%2Fbutton%3E%0A%20%20%20%20%20%20%3Cdiv%20id%3D%22scroller%22%3E%3Cdiv%20id%3D%22scroll-content%22%3EScrollable%20fixture%3C%2Fdiv%3E%3C%2Fdiv%3E%0A%20%20%20%20%20%20%3Cinput%20id%3D%22value-control%22%20value%3D%22before%22%3E%0A%20%20%20%20%20%20%3Cscript%3Edocument.querySelector('%23value-control').addEventListener('input'%2C%20()%20%3D%3E%20window.__input_events%2B%2B)%3C%2Fscript%3E%0A%20%20%20%20%20%20%3C%2Fbody%3E%3C%2Fhtml%3E",
+        "width": 900,
+        "height": 700
+      },
+      "timestamp": 1784628575096
+    }
+  },
+  {
+    "kind": "rrweb",
+    "docId": 3362801172,
+    "e": {
+      "type": 2,
+      "data": {
+        "node": {
+          "type": 0,
+          "childNodes": [
+            {
+              "type": 1,
+              "name": "html",
+              "publicId": "",
+              "systemId": "",
+              "id": 2
+            },
+            {
+              "type": 2,
+              "tagName": "html",
+              "attributes": {},
+              "childNodes": [
+                {
+                  "type": 2,
+                  "tagName": "head",
+                  "attributes": {},
+                  "childNodes": [
+                    {
+                      "type": 2,
+                      "tagName": "title",
+                      "attributes": {},
+                      "childNodes": [
+                        {
+                          "type": 3,
+                          "textContent": "Semantic remoting fixture",
+                          "id": 6
+                        }
+                      ],
+                      "id": 5
+                    },
+                    {
+                      "type": 3,
+                      "textContent": "\n      ",
+                      "id": 7
+                    },
+                    {
+                      "type": 2,
+                      "tagName": "style",
+                      "attributes": {
+                        "_cssText": "body { font-family: sans-serif; margin: 20px; }#known { position: absolute; left: 40px; top: 60px; width: 180px; height: 45px; }#scroller { position: absolute; left: 260px; top: 60px; width: 120px; height: 80px; overflow: scroll; }#scroll-content { width: 400px; height: 400px; }"
+                      },
+                      "childNodes": [
+                        {
+                          "type": 3,
+                          "textContent": "",
+                          "id": 9
+                        }
+                      ],
+                      "id": 8
+                    }
+                  ],
+                  "id": 4
+                },
+                {
+                  "type": 2,
+                  "tagName": "body",
+                  "attributes": {},
+                  "childNodes": [
+                    {
+                      "type": 3,
+                      "textContent": "\n      ",
+                      "id": 11
+                    },
+                    {
+                      "type": 2,
+                      "tagName": "main",
+                      "attributes": {},
+                      "childNodes": [
+                        {
+                          "type": 2,
+                          "tagName": "h1",
+                          "attributes": {},
+                          "childNodes": [
+                            {
+                              "type": 3,
+                              "textContent": "Remote desktop software",
+                              "id": 14
+                            }
+                          ],
+                          "id": 13
+                        },
+                        {
+                          "type": 2,
+                          "tagName": "p",
+                          "attributes": {},
+                          "childNodes": [
+                            {
+                              "type": 3,
+                              "textContent": "A semantic mirror keeps text selectable.",
+                              "id": 16
+                            }
+                          ],
+                          "id": 15
+                        }
+                      ],
+                      "id": 12
+                    },
+                    {
+                      "type": 3,
+                      "textContent": "\n      ",
+                      "id": 17
+                    },
+                    {
+                      "type": 2,
+                      "tagName": "button",
+                      "attributes": {
+                        "id": "known"
+                      },
+                      "childNodes": [
+                        {
+                          "type": 3,
+                          "textContent": "Known target",
+                          "id": 19
+                        }
+                      ],
+                      "id": 18
+                    },
+                    {
+                      "type": 3,
+                      "textContent": "\n      ",
+                      "id": 20
+                    },
+                    {
+                      "type": 2,
+                      "tagName": "div",
+                      "attributes": {
+                        "id": "scroller"
+                      },
+                      "childNodes": [
+                        {
+                          "type": 2,
+                          "tagName": "div",
+                          "attributes": {
+                            "id": "scroll-content"
+                          },
+                          "childNodes": [
+                            {
+                              "type": 3,
+                              "textContent": "Scrollable fixture",
+                              "id": 23
+                            }
+                          ],
+                          "id": 22
+                        }
+                      ],
+                      "id": 21
+                    },
+                    {
+                      "type": 3,
+                      "textContent": "\n      ",
+                      "id": 24
+                    },
+                    {
+                      "type": 2,
+                      "tagName": "input",
+                      "attributes": {
+                        "id": "value-control",
+                        "value": "before"
+                      },
+                      "childNodes": [],
+                      "id": 25
+                    },
+                    {
+                      "type": 3,
+                      "textContent": "\n      ",
+                      "id": 26
+                    },
+                    {
+                      "type": 2,
+                      "tagName": "script",
+                      "attributes": {},
+                      "childNodes": [
+                        {
+                          "type": 3,
+                          "textContent": "SCRIPT_PLACEHOLDER",
+                          "id": 28
+                        }
+                      ],
+                      "id": 27
+                    },
+                    {
+                      "type": 3,
+                      "textContent": "\n      ",
+                      "id": 29
+                    }
+                  ],
+                  "id": 10
+                }
+              ],
+              "id": 3
+            }
+          ],
+          "id": 1
+        },
+        "initialOffset": {
+          "left": 0,
+          "top": 0
+        }
+      },
+      "timestamp": 1784628575121
+    }
+  },
+  {
+    "kind": "rrweb",
+    "docId": 3362801172,
+    "e": {
+      "type": 3,
+      "data": {
+        "source": 0,
+        "texts": [],
+        "attributes": [],
+        "removes": [],
+        "adds": [
+          {
+            "parentId": 12,
+            "nextId": null,
+            "node": {
+              "type": 2,
+              "tagName": "p",
+              "attributes": {
+                "id": "late-mutation"
+              },
+              "childNodes": [],
+              "id": 30
+            }
+          },
+          {
+            "parentId": 30,
+            "nextId": null,
+            "node": {
+              "type": 3,
+              "textContent": "Mutation captured after the full snapshot.",
+              "id": 31
+            }
+          }
+        ]
+      },
+      "timestamp": 1784628575176
+    }
+  },
+  {
+    "kind": "rrweb",
+    "docId": 3362801172,
+    "e": {
+      "type": 3,
+      "data": {
+        "source": 3,
+        "id": 21,
+        "x": 35,
+        "y": 45
+      },
+      "timestamp": 1784628575323
+    }
+  },
+  {
+    "kind": "rrweb",
+    "docId": 3362801172,
+    "e": {
+      "type": 3,
+      "data": {
+        "source": 5,
+        "text": "after",
+        "isChecked": false,
+        "id": 25
+      },
+      "timestamp": 1784628575332
+    }
+  },
+  {
+    "kind": "rrweb",
+    "docId": 3362801172,
+    "e": {
+      "type": 4,
+      "data": {
+        "href": "data:text/html,%3C!doctype%20html%3E%0A%20%20%20%20%20%20%3Chtml%3E%3Chead%3E%3Ctitle%3ESemantic%20remoting%20fixture%3C%2Ftitle%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20body%20%7B%20font-family%3A%20sans-serif%3B%20margin%3A%2020px%3B%20%7D%0A%20%20%20%20%20%20%20%20%23known%20%7B%20position%3A%20absolute%3B%20left%3A%2040px%3B%20top%3A%2060px%3B%20width%3A%20180px%3B%20height%3A%2045px%3B%20%7D%0A%20%20%20%20%20%20%20%20%23scroller%20%7B%20position%3A%20absolute%3B%20left%3A%20260px%3B%20top%3A%2060px%3B%20width%3A%20120px%3B%20height%3A%2080px%3B%20overflow%3A%20scroll%3B%20%7D%0A%20%20%20%20%20%20%20%20%23scroll-content%20%7B%20width%3A%20400px%3B%20height%3A%20400px%3B%20%7D%0A%20%20%20%20%20%20%3C%2Fstyle%3E%3C%2Fhead%3E%3Cbody%3E%0A%20%20%20%20%20%20%3Cmain%3E%3Ch1%3ERemote%20desktop%20software%3C%2Fh1%3E%3Cp%3EA%20semantic%20mirror%20keeps%20text%20selectable.%3C%2Fp%3E%3C%2Fmain%3E%0A%20%20%20%20%20%20%3Cbutton%20id%3D%22known%22%3EKnown%20target%3C%2Fbutton%3E%0A%20%20%20%20%20%20%3Cdiv%20id%3D%22scroller%22%3E%3Cdiv%20id%3D%22scroll-content%22%3EScrollable%20fixture%3C%2Fdiv%3E%3C%2Fdiv%3E%0A%20%20%20%20%20%20%3Cinput%20id%3D%22value-control%22%20value%3D%22before%22%3E%0A%20%20%20%20%20%20%3Cscript%3Edocument.querySelector('%23value-control').addEventListener('input'%2C%20()%20%3D%3E%20window.__input_events%2B%2B)%3C%2Fscript%3E%0A%20%20%20%20%20%20%3C%2Fbody%3E%3C%2Fhtml%3E",
+        "width": 900,
+        "height": 700
+      },
+      "timestamp": 1784628575347
+    }
+  },
+  {
+    "kind": "rrweb",
+    "docId": 3362801172,
+    "e": {
+      "type": 2,
+      "data": {
+        "node": {
+          "type": 0,
+          "childNodes": [
+            {
+              "type": 1,
+              "name": "html",
+              "publicId": "",
+              "systemId": "",
+              "id": 2
+            },
+            {
+              "type": 2,
+              "tagName": "html",
+              "attributes": {},
+              "childNodes": [
+                {
+                  "type": 2,
+                  "tagName": "head",
+                  "attributes": {},
+                  "childNodes": [
+                    {
+                      "type": 2,
+                      "tagName": "title",
+                      "attributes": {},
+                      "childNodes": [
+                        {
+                          "type": 3,
+                          "textContent": "Semantic remoting fixture",
+                          "id": 6
+                        }
+                      ],
+                      "id": 5
+                    },
+                    {
+                      "type": 3,
+                      "textContent": "\n      ",
+                      "id": 7
+                    },
+                    {
+                      "type": 2,
+                      "tagName": "style",
+                      "attributes": {
+                        "_cssText": "body { font-family: sans-serif; margin: 20px; }#known { position: absolute; left: 40px; top: 60px; width: 180px; height: 45px; }#scroller { position: absolute; left: 260px; top: 60px; width: 120px; height: 80px; overflow: scroll; }#scroll-content { width: 400px; height: 400px; }"
+                      },
+                      "childNodes": [
+                        {
+                          "type": 3,
+                          "textContent": "",
+                          "id": 9
+                        }
+                      ],
+                      "id": 8
+                    }
+                  ],
+                  "id": 4
+                },
+                {
+                  "type": 2,
+                  "tagName": "body",
+                  "attributes": {},
+                  "childNodes": [
+                    {
+                      "type": 3,
+                      "textContent": "\n      ",
+                      "id": 11
+                    },
+                    {
+                      "type": 2,
+                      "tagName": "main",
+                      "attributes": {},
+                      "childNodes": [
+                        {
+                          "type": 2,
+                          "tagName": "h1",
+                          "attributes": {},
+                          "childNodes": [
+                            {
+                              "type": 3,
+                              "textContent": "Remote desktop software",
+                              "id": 14
+                            }
+                          ],
+                          "id": 13
+                        },
+                        {
+                          "type": 2,
+                          "tagName": "p",
+                          "attributes": {},
+                          "childNodes": [
+                            {
+                              "type": 3,
+                              "textContent": "A semantic mirror keeps text selectable.",
+                              "id": 16
+                            }
+                          ],
+                          "id": 15
+                        },
+                        {
+                          "type": 2,
+                          "tagName": "p",
+                          "attributes": {
+                            "id": "late-mutation"
+                          },
+                          "childNodes": [
+                            {
+                              "type": 3,
+                              "textContent": "Mutation captured after the full snapshot.",
+                              "id": 31
+                            }
+                          ],
+                          "id": 30
+                        }
+                      ],
+                      "id": 12
+                    },
+                    {
+                      "type": 3,
+                      "textContent": "\n      ",
+                      "id": 17
+                    },
+                    {
+                      "type": 2,
+                      "tagName": "button",
+                      "attributes": {
+                        "id": "known"
+                      },
+                      "childNodes": [
+                        {
+                          "type": 3,
+                          "textContent": "Known target",
+                          "id": 19
+                        }
+                      ],
+                      "id": 18
+                    },
+                    {
+                      "type": 3,
+                      "textContent": "\n      ",
+                      "id": 20
+                    },
+                    {
+                      "type": 2,
+                      "tagName": "div",
+                      "attributes": {
+                        "id": "scroller",
+                        "rr_scrollLeft": 35,
+                        "rr_scrollTop": 45
+                      },
+                      "childNodes": [
+                        {
+                          "type": 2,
+                          "tagName": "div",
+                          "attributes": {
+                            "id": "scroll-content"
+                          },
+                          "childNodes": [
+                            {
+                              "type": 3,
+                              "textContent": "Scrollable fixture",
+                              "id": 23
+                            }
+                          ],
+                          "id": 22
+                        }
+                      ],
+                      "id": 21
+                    },
+                    {
+                      "type": 3,
+                      "textContent": "\n      ",
+                      "id": 24
+                    },
+                    {
+                      "type": 2,
+                      "tagName": "input",
+                      "attributes": {
+                        "id": "value-control",
+                        "value": "after"
+                      },
+                      "childNodes": [],
+                      "id": 25
+                    },
+                    {
+                      "type": 3,
+                      "textContent": "\n      ",
+                      "id": 26
+                    },
+                    {
+                      "type": 2,
+                      "tagName": "script",
+                      "attributes": {},
+                      "childNodes": [
+                        {
+                          "type": 3,
+                          "textContent": "SCRIPT_PLACEHOLDER",
+                          "id": 28
+                        }
+                      ],
+                      "id": 27
+                    },
+                    {
+                      "type": 3,
+                      "textContent": "\n      ",
+                      "id": 29
+                    }
+                  ],
+                  "id": 10
+                }
+              ],
+              "id": 3
+            }
+          ],
+          "id": 1
+        },
+        "initialOffset": {
+          "left": 0,
+          "top": 0
+        }
+      },
+      "timestamp": 1784628575348
+    }
+  },
+  {
+    "kind": "rrweb",
+    "docId": 3362801172,
+    "e": {
+      "type": 3,
+      "data": {
+        "source": 0,
+        "texts": [],
+        "attributes": [],
+        "removes": [
+          {
+            "parentId": 10,
+            "id": 18
+          }
+        ],
+        "adds": []
+      },
+      "timestamp": 1784628575783
+    }
+  }
+]

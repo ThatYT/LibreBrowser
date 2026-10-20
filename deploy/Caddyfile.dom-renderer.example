@@ -1,0 +1,7 @@
+# Add only after DNS exists and private DOM compatibility/isolation checks pass.
+# The existing browser vhost and /~!frp transport handler remain unchanged.
+render.browser.home.libremedicine.org {
+    # Same existing private VPS visitor as the main LibreBrowser site.
+    # Preserve Host: Go selects its isolated renderer routes by hostname.
+    reverse_proxy 127.0.0.1:60830
+}

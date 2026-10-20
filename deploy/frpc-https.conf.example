@@ -1,0 +1,9 @@
+# /etc/systemd/system/frpc.service.d/20-https.conf
+# Explicitly approved HTTPS transport. The root-owned helper marks only FRP sockets.
+[Unit]
+After=v2raya.service
+[Service]
+ExecStart=
+ExecStart=/usr/local/bin/frpc -c /etc/frp/frpc-https.json
+ExecStartPre=+/usr/local/libexec/frp-https-route apply frpc
+ExecStopPost=+/usr/local/libexec/frp-https-route remove frpc

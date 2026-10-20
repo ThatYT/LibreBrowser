@@ -1,0 +1,10 @@
+# /etc/systemd/system/librebrowser-frpc.service.d/10-direct-route.conf
+# Requires explicit host-routing approval. The helper must be a root-owned copy.
+[Unit]
+After=v2raya.service
+
+[Service]
+# nft needs NETLINK only in the privileged pre/post helper; frpc has no capabilities.
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX AF_NETLINK
+ExecStartPre=+/usr/local/libexec/librebrowser-frp-route-bypass apply
+ExecStopPost=+/usr/local/libexec/librebrowser-frp-route-bypass remove

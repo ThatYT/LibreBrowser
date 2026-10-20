@@ -1,0 +1,16 @@
+# Explicit opt-in: docker compose -f compose.yaml -f deploy/compose.test.yaml run --build --rm acceptance
+services:
+  acceptance:
+    profiles: [test]
+    build:
+      context: .
+      network: "${BUILD_NETWORK:-default}"
+      dockerfile: deploy/Dockerfile.test
+    environment:
+      LIBREBROWSER_LIVE_TEST: "1"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - broker-socket:/run/librebrowser:ro
+    depends_on:
+      broker:
+        condition: service_healthy
